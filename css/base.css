@@ -1,0 +1,75 @@
+/* CSS Document */
+body {
+    background-color: #f8f9fb;
+}
+#head {
+    background-color: #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0px 2px 10px #e2e2e3;
+    z-index: 100;
+}
+#img_head {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 30%;
+    left: 3%;
+}
+#logo {
+    position: absolute;
+    background-color: #ffffff;
+    width: 260px;
+    height: 60px;
+    top: 5px;
+    left: 41%;
+}
+#logo-text {
+    font-size: 24px;
+    color: #4680ff;
+    position: absolute;
+    left: 50px;
+    top: -20%;
+}
+#user-text {
+    color: #4680ff;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+#exit-text{
+    color: #4680ff;
+    position: absolute;
+    right: 2%;
+    top: 33%;
+}
+#nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 260px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    box-shadow: 2px 0px 10px #e2e2e3;
+    z-index: 98;
+}
+#text_nav {
+    color: #929292;
+    font-size: 15px;
+    position: absolute;
+    left: 29.438px;
+    top: 88px;
+}
+#con{
+    position: absolute;
+    background-color: #ffffff;
+    width: 1220px;
+    height: 635px;
+    top: 100px;
+    left: 290px;
+    box-shadow: 0px 0px 10px #e2e2e3;
+    z-index: 97;
+}

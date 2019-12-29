@@ -1,0 +1,78 @@
+/* CSS Document */
+#menu{
+    position: absolute;
+    background-color: #54DAEB;
+    width: 260px;
+    height: 420px;
+    top: 150px;
+    left: 0px;
+}
+#menu-u0{
+    position: absolute;
+    background-color: #ffffff;
+    width: 260px;
+    height: 70px;
+    top: 0px;
+    left: 0px;
+}
+#menu-u1{
+    position: absolute;
+    background-color: #ffffff;
+    width: 260px;
+    height: 70px;
+    top: 70px;
+    left: 0px;
+}
+#menu-u2{
+    position: absolute;
+    background-color: #ffffff;
+    width: 260px;
+    height: 70px;
+    top: 140px;
+    left: 0px;
+}
+#menu-u3{
+    position: absolute;
+    background-color: #4680ff;
+    width: 260px;
+    height: 70px;
+    top: 210px;
+    left: 0px;
+}
+#menu-u4{
+    position: absolute;
+    background-color: #ffffff;
+    width: 260px;
+    height: 70px;
+    top: 280px;
+    left: 0px;
+}
+#menu-u5{
+    position: absolute;
+    background-color: #ffffff;
+    width: 260px;
+    height: 70px;
+    top: 350px;
+    left: 0px;
+}
+#img-u0,#img-u1,#img-u2,#img-u3,#img-u4,#img-u5{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 31%;
+    left: 30px;
+}
+#text-u3{
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    top: 6%;
+    left: 34%;
+}
+#text-u1,#text-u2,#text-u0,#text-u4,#text-u5{
+    position: absolute;
+    color: #8a8a8a;
+    font-size: 20px;
+    top: 6%;
+    left: 34%;
+}
