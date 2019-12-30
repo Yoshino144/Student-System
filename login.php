@@ -4,6 +4,21 @@
 <head>
     <meta charset="utf-8">
     <title>无标题文档</title>
+<link href="css/login.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#tws_img").hide();
+    });
+        
+    function aa(){
+        $(document).ready(function(){
+        $("#tws_img").fadeIn(1000);
+    });
+    };
+        
+    </script>
 </head>
 
 <body>
@@ -47,14 +62,26 @@
         return $data;
     }
     ?>
-
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        用户名<input type="text" name="username">
-        密码<input type="text" name="password">
-        <input type="submit">
-        <?php if ($ad == 1) echo " 密码错误" ?>
-    </form>
-
+    
+    <div id="bg">
+        <div id="bg_1"></div>
+        <div id="bg_2"></div>
+        <div id="bg_3"></div>
+        <div id="bg_4"></div>
+        <div id="bg_text">
+            <p id="text" >学生管理系统</p>
+        </div>
+        <div id="input1">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <input type="text" name="username" placeholder="用户名"><br>
+                <input type="text" name="password" placeholder="密码"><br>
+                <img id="tws_img" src="img/tws.png">
+                <a href="#" id="forget">忘记密码</a><br>
+                <input type="submit"><br>
+                <?php if ($ad == 1) echo "<script type=text/javascript>aa()</script>" ?>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

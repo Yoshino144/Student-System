@@ -97,19 +97,22 @@ $result = mysqli_query($link, $ming);
             </tr>
             <?php
             while ($row = mysqli_fetch_array($result)) {
-                echo "<tr>";
-                echo "   <td>" . $row['id'] . "</td>";
-                echo "   <td>" . $row['user_name'] . "</td>";
-                echo "   <td>" . $row['number'] . "</td>";
-                echo "   <td>" . $row['password'] . "</td>";
-                echo "   <td>" . $row['c_time'] . "</td>";
-                echo "   <td>" . $row['last_time'] . "</td>";
-                echo '<td><a href ="javascript:void(0);" onclick ="modifyadmin_js(' . $row['id'] . ')">
-                        <img id="modify-img" src="img/modify.png"></a>
-                        <a href ="javascript:void(0);" onclick ="deleteadmin_js(' . $row['id'] . ')">
-                        <img id="delete-img" src="img/delete.png"></a>
-                        </td>';
-                echo "</tr>";
+                if( $row['delete_flag'] ==1){
+                    echo "<tr>";
+                    echo "   <td>" . $row['id'] . "</td>";
+                    echo "   <td>" . $row['user_name'] . "</td>";
+                    echo "   <td>" . $row['number'] . "</td>";
+                    echo "   <td>" . $row['password'] . "</td>";
+                    echo "   <td>" . $row['c_time'] . "</td>";
+                    echo "   <td>" . $row['last_time'] . "</td>";
+                    echo '<td><a href ="javascript:void(0);" onclick ="modifyadmin_js(' . $row['id'] . ')">
+                            <img id="modify-img" src="img/modify_a.png"></a>
+                            &nbsp;
+                            <a href ="javascript:void(0);" onclick ="deleteadmin_js(' . $row['id'] . ')">
+                            <img id="delete-img" src="img/delete_a.png"></a>
+                            </td>';
+                    echo "</tr>";
+                }
             }
             ?>
         </table>

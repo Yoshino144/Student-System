@@ -28,7 +28,7 @@ switch( $_GET['operation'] ){
         break;
         
     case 'deleteadmin':
-        $ming = 'DELETE FROM admin WHERE id = ' . $_GET['id'];
+        $ming = "update admin set delete_flag='0' where id=" . $_GET['id'];
         echo "<br>" . $ming;
         $result = mysqli_query($link,$ming);
         if($result > 0){
@@ -38,6 +38,45 @@ switch( $_GET['operation'] ){
             echo "<script>alert(\"删除失败\");</script>";
         }
         header("Location: ../admin.php");
+        break;
+        
+    case 'deletecollege':
+        $ming = "update college set delete_flag='0' where id=" . $_GET['id'];
+        echo "<br>" . $ming;
+        $result = mysqli_query($link,$ming);
+        if($result > 0){
+            echo "<script>alert(\"删除成功\");</script>";
+        }
+        else{
+            echo "<script>alert(\"删除失败\");</script>";
+        }
+        header("Location: ../college.php");
+        break;
+        
+    case 'deletemajor':
+        $ming = "update major set delete_flag='0' where id=" . $_GET['id'];
+        echo "<br>" . $ming;
+        $result = mysqli_query($link,$ming);
+        if($result > 0){
+            echo "<script>alert(\"删除成功\");</script>";
+        }
+        else{
+            echo "<script>alert(\"删除失败\");</script>";
+        }
+        header("Location: ../major.php");
+        break;
+        
+    case 'deleteclass':
+        $ming = "update class set delete_flag='0' where id=" . $_GET['id'];
+        echo "<br>" . $ming;
+        $result = mysqli_query($link,$ming);
+        if($result > 0){
+            echo "<script>alert(\"删除成功\");</script>";
+        }
+        else{
+            echo "<script>alert(\"删除失败\");</script>";
+        }
+        header("Location: ../class.php");
         break;
 }
 

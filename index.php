@@ -12,7 +12,7 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
 
 <head>
     <meta charset="utf-8">
-    <title>无标题文档</title>
+    <title>首 页</title>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css">
@@ -24,10 +24,10 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
     <div id="head">
         <img id="img_head" src="img/lie.png">
         <div id="logo">
-            <p id="logo-text" style="color: #5a8ec5" >学生管理系统</p>
+            <p id="logo-text" style="color: #57585d" >学生管理系统</p>
         </div>
-        <p id="user-text" style="color: #5a8ec5" ><?php echo "用户:" . $_SESSION['username']; ?> </p>
-        <a id="exit-text" href="login.php" style="color: #5a8ec5" >退出</a>
+        <p id="user-text" style="color: #57585d" ><?php echo "用户:" . $_SESSION['username']; ?> </p>
+        <a id="exit-text" href="login.php" style="color: #57585d" >退出</a>
     </div>
     <div id="nav">
         <p id="text_nav">导航</p>

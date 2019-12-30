@@ -12,7 +12,7 @@
     $dbname = 'school';
     $link = mysqli_connect($serve,$username,$password,$dbname);
     mysqli_set_charset($link,'UTF-8');
-    $ming='select * from student';
+    $ming='SELECT * FROM college,major,class,student WHERE student.major_id=major.id and student.college_id=college.id and student.class_id=class.id';
     $result = mysqli_query($link,$ming);
 ?>
 
@@ -99,15 +99,16 @@
                         echo '<td>' . $row['phone_number'] . '</td>';
                         echo '<td>' . $row['sex'] . '</td>';
                         echo '<td>' . $row['year'] . '</td>';
-                        echo '<td>' . $row['college_id'] . '</td>';
-                        echo '<td>' . $row['major_id'] . '</td>';
-                        echo '<td>' . $row['class_id'] . '</td>';
+                        echo '<td>' . $row['college_name'] . '</td>';
+                        echo '<td>' . $row['major_name'] . '</td>';
+                        echo '<td>' . $row['class_name'] . '</td>';
                         echo '<td>' . $row['c_time'] . '</td>';
                         echo '<td>' . $row['u_time'] . '</td>';
                         echo '<td><a href ="javascript:void(0);" onclick ="modify_js(' . $row['id']. ')">
-                              <img id="modify-img" src="img/modify.png"></a>
+                              <img id="modify-img" src="img/modify_s.png"></a>
+                              &nbsp;
                               <a href ="javascript:void(0);" onclick ="delete_js(' .$row['id'] . ')">
-                              <img id="delete-img" src="img/delete.png"></a>
+                              <img id="delete-img" src="img/delete_s.png"></a>
                               </td>';
                         echo '</tr>';
                     }
