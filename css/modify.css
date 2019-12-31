@@ -49,7 +49,7 @@
 }
 #menu-u5{
     position: absolute;
-    background-color: #4680ff;
+    background-color: #16a085;
     width: 260px;
     height: 70px;
     top: 350px;
@@ -78,7 +78,7 @@
 }
 #tda{
     height:70px;
-    background-color: #4680ff;
+    background-color: #16a085;
     font-size: 30px;
     color: #ffffff;
     box-shadow: 0px 2px 10px #a4a4a4;
@@ -99,10 +99,18 @@ table, th, td{
     width: 26px;
     height: 26px;
 }
-input[type=submit],#button {
+input[type=submit],#button{
     color: #ffffff;
     border: none;
-    background-color: #4680ff;
+    background-color: #0f9176;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 0px 10px #c4c4c4;
+}
+#bb{
+    color: #ffffff;
+    border: none;
+    background-color: #5cbdaa;
     width: 200px;
     height: 50px;
     box-shadow: 0px 0px 10px #c4c4c4;

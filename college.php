@@ -85,7 +85,7 @@ function modify_college(id){
             
             <tr>
                 <th colspan="12" id="tda"><p>学院信息</p>
-                    <a href="php/inserta.php">
+                    <a href="php/insertcollege.php">
                         <img src="img/add.png" id="add-img"></a>
                 </th>
             </tr>

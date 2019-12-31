@@ -29,19 +29,19 @@ body {
 }
 #logo-text {
     font-size: 24px;
-    color: #4680ff;
+    color: #0f9176;
     position: absolute;
     left: 50px;
     top: -20%;
 }
 #user-text {
-    color: #4680ff;
+    color: #16a085;
     position: absolute;
     right: 5%;
     top: 10%;
 }
 #exit-text{
-    color: #4680ff;
+    color: #0f9176;
     position: absolute;
     right: 2%;
     top: 33%;

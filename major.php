@@ -11,7 +11,7 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
     $dbname = 'school';
     $link = mysqli_connect($serve,$username,$password,$dbname);
     mysqli_set_charset($link,'UTF-8');
-    $ming='SELECT * FROM college,major WHERE college.id=major.id ';
+    $ming='SELECT * FROM college,major WHERE college.id=major.college_id ';
     $result = mysqli_query($link,$ming);
 ?>
 
@@ -83,7 +83,7 @@ function modify_major(id){
             
             <tr>
                 <th colspan="12" id="tda"><p>学院信息</p>
-                    <a href="php/inserta.php">
+                    <a href="php/insertmajor.php">
                         <img src="img/add.png" id="add-img"></a>
                 </th>
             </tr>

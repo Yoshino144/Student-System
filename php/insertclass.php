@@ -6,16 +6,14 @@ session_start();
 if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
     header("location:../login.php");
 
-$idd = $_GET['id'];
-
 $serve = 'localhost:3306';
-$username = 'root';
-$password = 'root';
-$dbname = 'school';
-$link = mysqli_connect($serve, $username, $password, $dbname);
-mysqli_set_charset($link, 'UTF-8');
-$ming = 'select * from college';
-$result = mysqli_query($link, $ming);
+    $username = 'root';
+    $password = 'root';
+    $dbname = 'school';
+    $link = mysqli_connect($serve,$username,$password,$dbname);
+    mysqli_set_charset($link,'UTF-8');
+    $ming='SELECT * FROM college';
+    $result = mysqli_query($link,$ming);
 
 ?>
 
@@ -23,10 +21,10 @@ $result = mysqli_query($link, $ming);
 
 <head>
     <meta charset="utf-8">
-    <title>添加学生信息</title>
+    <title>添加新班级</title>
     <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
-    <link href="../css/modify.css" rel="stylesheet" type="text/css">
+    <link href="../css/modifyclass.css" rel="stylesheet" type="text/css">
     <link href="../css/base.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -35,10 +33,10 @@ $result = mysqli_query($link, $ming);
     <div id="head">
         <img id="img_head" src="../img/lie.png">
         <div id="logo">
-            <p id="logo-text">学生管理系统</p>
+            <p id="logo-text"  style="color: #ce803b">学生管理系统</p>
         </div>
-        <p id="user-text"><?php echo "用户:" . $_SESSION['username']; ?> </p>
-        <a id="exit-text" href="login.php">退出</a>
+        <p id="user-text"  style="color: #ce803b"><?php echo "用户:" . $_SESSION['username']; ?> </p>
+        <a id="exit-text" href="login.php"  style="color: #ce803b">退出</a>
     </div>
     <div id="nav">
         <p id="text_nav">导航</p>
@@ -60,30 +58,23 @@ $result = mysqli_query($link, $ming);
                 <p id="text-u3">专业管理</p>
             </a>
             <a id="menu-u4" href="../class.php">
-                <img id="img-u4" src="../img/u4-4.png"></img>
+                <img id="img-u4" src="../img/u4.png"></img>
                 <p id="text-u4">班级管理</p>
             </a>
             <a id="menu-u5" href="../student.php">
-                <img id="img-u5" src="../img/u5.png"></img>
+                <img id="img-u5" src="../img/u5-5.png"></img>
                 <p id="text-u5">学生信息管理</p>
             </a>
         </div>
     </div>
     <div id="con">
-        <form method="post" action="insert.php">
+        <form method="post" action="inclass.php">
             <table>
                 <tr>
-                    <td colspan="3" id="tda"> 添加学生信息 </td>
+                    <td colspan="3" id="tda"> 添加班级信息 </td>
                 </tr>
                 <tr>
-                    <td>序号: <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "></td>
-                    <td>学号: <input name="student_num" type="text" value=" <?php echo $row['student_num']; ?> "></td>
-                    <td>姓名: <input name="name" type="text" value=" <?php echo $row['name']; ?> "></td>
-                </tr>
-                <tr>
-                    <td>手机号: <input name="phone_number" type="text" value=" <?php echo $row['phone_number']; ?> "></td>
-                    <td>性别: <input name="sex" type="text" value=" <?php echo $row['sex']; ?> "></td>
-                    <td>入学年份: <input name="year" type="text" value=" <?php echo $row['year']; ?> "></td>
+                    <td>序号: <input readonly="readonly" name="id" type="text" ></td>
                 </tr>
                 <tr>
                     <td>学院名: <select name="college_id" id="select_college">
@@ -92,9 +83,15 @@ $result = mysqli_query($link, $ming);
                             echo '<option value ="' . $row['id'] . '">' . $row['college_name'] . '</option>';
                         }
                         ?>
-                        </select></td>
-                    <td>专业: <select  id="select_major" name="major_id" ></select></td>
-                    <td>班级: <select  id="select_class" name="class_id" ></select></td>
+                        </select>
+                </tr>
+                <tr>
+                    <td>专业名: <select name="major_id" id="select_major">
+                        
+                        </select>
+                </tr>
+                <tr>
+                    <td>班级名: <input name="class_name" type="text" ></td>
                 </tr>
                 <tr>
                     <td colspan="3">
@@ -109,17 +106,11 @@ $result = mysqli_query($link, $ming);
     <script>
         $(document).ready(function(){
            getData(); 
-           getclassData();
         });
         
         $("#select_college").change(function(){
             //alert("123");
            getData(); 
-        });
-        
-        $("#select_major").change(function(){
-            //alert("123");
-           getclassData(); 
         });
         
         function getData(){
@@ -136,33 +127,8 @@ $result = mysqli_query($link, $ming);
                         for(var i = 0;i<data.length;i++){
                             $('#select_major').append("<option value=\"" + data[i]['id'] + "\">"
                                                      + data[i]['major_name'] +"</option>");
-                            console.log("major: <option value=\"" + data[i]['id'] + "\">"
+                            console.log("<option value=\"" + data[i]['id'] + "\">"
                                                      + data[i]['major_name'] +"</option>");
-                        }
-                }
-            });
-        }
-        
-        function getclassData(){
-            //alert("123");
-            major_date = $('#select_major').val();
-            if(major_date==null)
-                major_date=1;
-            console.log("major_date:" + major_date)
-            $.ajax({
-                type:"post",
-                url:"class_date.php",
-                dataType:'json',
-                data:{major_date:major_date},
-                success:function(data){
-                    console.log("classdata: "+data);
-                    $('#select_class').empty();
-                    console.log(data.length);
-                        for(var i = 0;i<data.length;i++){
-                            $('#select_class').append("<option value=\"" + data[i]['id'] + "\">"
-                                                     + data[i]['class_name'] +"</option>");
-                            console.log("class: <option value=\"" + data[i]['id'] + "\">"
-                                                     + data[i]['class_name'] +"</option>");
                         }
                 }
             });

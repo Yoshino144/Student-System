@@ -33,7 +33,7 @@
 }
 #menu-u3{
     position: absolute;
-    background-color: #ffffff;
+    background-color: #70a2d7;
     width: 260px;
     height: 70px;
     top: 210px;
@@ -49,7 +49,7 @@
 }
 #menu-u5{
     position: absolute;
-    background-color: #16a085;
+    background-color: #ffffff;
     width: 260px;
     height: 70px;
     top: 350px;
@@ -62,14 +62,14 @@
     top: 31%;
     left: 30px;
 }
-#text-u5{
+#text-u3{
     position: absolute;
     color: #ffffff;
     font-size: 20px;
     top: 6%;
     left: 34%;
 }
-#text-u1,#text-u2,#text-u3,#text-u4,#text-u0{
+#text-u1,#text-u2,#text-u0,#text-u4,#text-u5{
     position: absolute;
     color: #8a8a8a;
     font-size: 20px;
@@ -94,7 +94,7 @@ table, th, td{
 }
 #tda{
     height:70px;
-    background-color: #16a085;
+    background-color: #70a2d7;
     font-size: 30px;
     color: #ffffff;
     box-shadow: 0px 2px 10px #a4a4a4;

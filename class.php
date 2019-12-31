@@ -83,7 +83,7 @@ function modify_class(id){
             
             <tr>
                 <th colspan="12" id="tda"><p>班级信息</p>
-                    <a href="php/inserta.php">
+                    <a href="php/insertclass.php">
                         <img src="img/add.png" id="add-img"></a>
                 </th>
             </tr>
