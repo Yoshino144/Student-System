@@ -7,7 +7,7 @@
         header("location:../login.php");
     
     $idd=$_GET['id'];
-
+//    echo "<script>alert('" . $idd . "');</script>";
     $serve = 'localhost:3306';
     $username = 'root';
     $password = 'root';
@@ -15,6 +15,7 @@
     $link = mysqli_connect($serve,$username,$password,$dbname);
     mysqli_set_charset($link,'UTF-8');
     $ming='select * from student,class,major,college where student.id=' . $idd . ' and student.class_id=class.id and student.major_id=major.id and student.college_id = college.id';
+    //echo "<script>alert('" . $ming . "');</script>";
     $result = mysqli_query($link,$ming);
     $row = mysqli_fetch_array($result);
 ?>
@@ -75,7 +76,7 @@
                     <td colspan="3" id="tda" >修改&nbsp;&nbsp; <?php echo $row['name']; ?>&nbsp;&nbsp;同学的信息</td>
                 </tr>
                 <tr>
-                    <td>序号:    <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "></td>
+                    <td>序号:    <input readonly="readonly" name="id" type="text" value=" <?php echo $idd; ?> "></td>
                     <td>学号:    <input name="student_num" type="text" value=" <?php echo $row['student_num']; ?> "></td>
                     <td>姓名:    <input name="name" type="text" value=" <?php echo $row['name']; ?> "></td>
                 </tr>

@@ -34,7 +34,7 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
 }
 
 function modify_class(id){
-    //window.location.href = 'http://localhost/pro/php/modify.php?operation=modify&id=' + id;
+    window.location.href = 'http://localhost/pro/php/modifyclass.php?operation=modify&id=' + id;
 }
     </script>
 </head>

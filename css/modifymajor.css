@@ -106,3 +106,19 @@ table, th, td{
     top: 31px;
     right: 35px;
 }
+input[type=submit],#button {
+    color: #ffffff;
+    border: none;
+    background-color: #70a2d7;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 0px 10px #c4c4c4;
+}
+input[type=submit],#button {
+    color: #ffffff;
+    border: none;
+    background-color: #70a2d7;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 0px 10px #c4c4c4;
+}

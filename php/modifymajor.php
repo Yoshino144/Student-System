@@ -14,7 +14,7 @@
     $dbname = 'school';
     $link = mysqli_connect($serve,$username,$password,$dbname);
     mysqli_set_charset($link,'UTF-8');
-    $ming='select * from admin where id=' . $idd;
+    $ming='select * from major,college where major.id=' . $idd . ' and major.college_id=college.id';
     $result = mysqli_query($link,$ming);
     $row = mysqli_fetch_array($result); 
     
@@ -26,7 +26,7 @@
 <title>修改管理员</title>
     <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
-    <link href="../css/modifyadmin.css" rel="stylesheet" type="text/css">
+    <link href="../css/modifymajor.css" rel="stylesheet" type="text/css">
     <link href="../css/base.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -35,10 +35,10 @@
     <div id="head">
         <img id="img_head" src="../img/lie.png">
         <div id="logo">
-            <p id="logo-text" style="color: #f35758">学生管理系统</p>
+            <p id="logo-text" style="color: #6496cb">学生管理系统</p>
         </div>
-        <p id="user-text" style="color: #f35758"><?php echo "用户:" . $_SESSION['user_name']; ?> </p>
-        <a id="exit-text" href="../login.php" style="color: #f35758">退出</a>
+        <p id="user-text" style="color: #6496cb"><?php echo "用户:" . $_SESSION['user_name']; ?> </p>
+        <a id="exit-text" href="../login.php" style="color: #6496cb">退出</a>
     </div>
     <div id="nav">
         <p id="text_nav" >导航</p>
@@ -48,7 +48,7 @@
                 <p id="text-u0">首 页</p>
             </a>
             <a id="menu-u1" href="../admin.php">
-                <img id="img-u1" src="../img/u1.png" ></img>
+                <img id="img-u1" src="../img/u1-1.png" ></img>
                 <p id="text-u1">管理员管理</p>
             </a>
             <a id="menu-u2" href="../college.php">
@@ -56,7 +56,7 @@
                 <p id="text-u2">学院管理</p>
             </a>
             <a id="menu-u3" href="../major.php">
-                <img id="img-u3" src="../img/u3-3.png" ></img>
+                <img id="img-u3" src="../img/u3.png" ></img>
                 <p id="text-u3">专业管理</p>
             </a>
             <a id="menu-u4" href="../class.php">
@@ -70,22 +70,19 @@
         </div>
     </div>
     <div id="con">
-        <form method="post" action="modadmin.php">
+        <form method="post" action="modmajor.php">
             <table>
                 <tr>
                     <td colspan="3" id="tda" >修改&nbsp;&nbsp;<?php echo $row['user_name']; ?>&nbsp;&nbsp;管理员的信息</td>
                 </tr>
                 <tr>
-                    <td>id:    <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "></td>
+                    <td>id:    <input readonly="readonly" name="id" type="text" value=" <?php echo $idd; ?> "></td>
                 </tr>
                 <tr>
-                    <td>用户名:    <input name="user_name" type="text" value=" <?php echo $row['user_name']; ?> "></td>
+                    <td>学院名:    <input readonly="readonly" type="text" value=" <?php echo $row['college_name']; ?> "></td>
                 </tr>
                 <tr>
-                    <td>账号:    <input name="number" type="text" value=" <?php echo $row['number']; ?> "></td>
-                </tr>
-                <tr>
-                    <td>密码:  <input name="password" type="text" value=" <?php echo $row['password']; ?> "></td>
+                    <td>专业名:    <input name="major_name" type="text" value=" <?php echo $row['major_name']; ?> "></td>
                 </tr>
                 <tr>
                     <td colspan="3">
