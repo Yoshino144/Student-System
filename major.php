@@ -41,16 +41,8 @@ function modify_major(id){
 
 <body>
 
-    <div id="head">
-        <img id="img_head" src="img/lie.png">
-        <div id="logo">
-            <p id="logo-text" style="color: #6496cb">学生管理系统</p>
-        </div>
-        <p id="user-text" style="color: #6496cb"><?php echo "用户:" . $_SESSION['username']; ?> </p>
-        <a id="exit-text" href="login.php" style="color: #6496cb">退出</a>
-    </div>
     <div id="nav">
-        <p id="text_nav">导航</p>
+        <p id="text_nav">MENU</p>
         <div id="menu">
             <a id="menu-u0" href="index.php">
                 <img id="img-u0" src="img/u0-0.png"></img>
@@ -78,15 +70,23 @@ function modify_major(id){
             </a>
         </div>
     </div>
-    <div id="con">
+
+    <div id="dw">
+        <div id="head">
+            <img id="img_head" src="img/lie.png">
+            <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
+        </div>
+        <div id="con">
+            <p id="tda">专业管理</p>
+        </div>
+        
+        <div id="can_title" >
+            <h2 id="can_text">修改添加专业信息</h2>
+            <p id="can_text2">谨慎修改</p>
+        </div>
+        
+        <div id="can">
         <table>
-            
-            <tr>
-                <th colspan="12" id="tda"><p>学院信息</p>
-                    <a href="php/insertmajor.php">
-                        <img src="img/add.png" id="add-img"></a>
-                </th>
-            </tr>
             <tr>
                 <th>序号</th>
                 <th>专业名</th>
@@ -116,7 +116,9 @@ function modify_major(id){
                 }
             ?>
         </table>
-    </div>
+   </div>
+    </div> 
+    
 </body>
 
 </html>

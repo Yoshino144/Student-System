@@ -28,52 +28,52 @@
 
 <body>
     
-    <div id="head">
-        <img id="img_head" src="img/lie.png">
-        <div id="logo">
-            <p id="logo-text">学生管理系统</p>
-        </div>
-        <p id="user-text" ><?php echo "用户:" . $_SESSION['username']; ?> </p>
-        <a id="exit-text" href="login.php">退出</a>
-    </div>
     <div id="nav">
-        <p id="text_nav" >导航</p>
-        <div id="menu" >
+        <p id="text_nav">MENU</p>
+        <div id="menu">
             <a id="menu-u0" href="index.php">
-                <img id="img-u0" src="img/u0-0.png" ></img>
+                <img id="img-u0" src="img/u0-0.png"></img>
                 <p id="text-u0">首 页</p>
             </a>
             <a id="menu-u1" href="admin.php">
-                <img id="img-u1" src="img/u1-1.png" ></img>
+                <img id="img-u1" src="img/u1-1.png"></img>
                 <p id="text-u1">管理员管理</p>
             </a>
             <a id="menu-u2" href="college.php">
-                <img id="img-u2" src="img/u2-2.png" ></img>
+                <img id="img-u2" src="img/u2-2.png"></img>
                 <p id="text-u2">学院管理</p>
             </a>
             <a id="menu-u3" href="major.php">
-                <img id="img-u3" src="img/u3-3.png" ></img>
+                <img id="img-u3" src="img/u3-3.png"></img>
                 <p id="text-u3">专业管理</p>
             </a>
             <a id="menu-u4" href="class.php">
-                <img id="img-u4" src="img/u4-4.png" ></img>
+                <img id="img-u4" src="img/u4-4.png"></img>
                 <p id="text-u4">班级管理</p>
             </a>
             <a id="menu-u5" href="student.php">
-                <img id="img-u5" src="img/u5.png" ></img>
+                <img id="img-u5" src="img/u5.png"></img>
                 <p id="text-u5">学生信息管理</p>
             </a>
         </div>
     </div>
-    <div id="con">
+
+    <div id="dw">
+        <div id="head">
+            <img id="img_head" src="img/lie.png">
+            <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
+        </div>
+        <div id="con">
+            <p id="tda">学生管理</p>
+        </div>
+        
+        <div id="can_title" >
+            <h2 id="can_text">修改添加学生信息</h2>
+            <p id="can_text2">谨慎修改</p>
+        </div>
+        
+        <div id="can">
         <table>
-            
-            <tr>
-                <th colspan="12" id="tda"><p>学生信息</p>
-                    <a href="php/inserta.php">
-                        <img src="img/add.png" id="add-img"></a>
-                </th>
-            </tr>
             <tr>
                 <th>序号</th>
                 <th>学号</th>
@@ -116,5 +116,6 @@
             ?>
         </table>
     </div>
+         </div>
 </body>
 </html>

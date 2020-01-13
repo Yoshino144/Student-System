@@ -17,20 +17,18 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
     <script type="text/javascript" src="js/index.js"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
+    <style>
+        #con{
+            height: 500px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div id="head">
-        <img id="img_head" src="img/lie.png">
-        <div id="logo">
-            <p id="logo-text" style="color: #57585d" >学生管理系统</p>
-        </div>
-        <p id="user-text" style="color: #57585d" ><?php echo "用户:" . $_SESSION['username']; ?> </p>
-        <a id="exit-text" href="login.php" style="color: #57585d" >退出</a>
-    </div>
+    
     <div id="nav">
-        <p id="text_nav">导航</p>
+        <p id="text_nav">MENU</p>
         <div id="menu">
             <a id="menu-u0" href="index.php">
                 <img id="img-u0" src="img/u0.png"></img>
@@ -58,9 +56,18 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
             </a>
         </div>
     </div>
-    <div id="con">
-
-    </div>
+    
+    <div id="dw">
+        <div id="head">
+            <img id="img_head" src="img/lie.png">
+            <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
+<!--            <a id="exit-text" href="login.php" style="color: #57585d" >退出</a>-->
+        </div>
+        <div id="con">
+        </div>
+    </div>                
+        
+   
 </body>
 
 </html>

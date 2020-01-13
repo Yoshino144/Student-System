@@ -21,28 +21,32 @@ $(document).ready(function () {
         if ($("#nav").css("width") == "260px"){
             $("#nav").animate({width: '90px'});
             $("#menu").animate({width: '90px'});
-            $("#menu-u0").animate({width: '90px'});
-            $("#menu-u1").animate({width: '90px'});
-            $("#menu-u2").animate({width: '90px'});
-            $("#menu-u3").animate({width: '90px'});
-            $("#menu-u4").animate({width: '90px'});
-            $("#menu-u5").animate({width: '90px'});
+            $("#menu-u0").animate({width: '70px'});
+            $("#menu-u1").animate({width: '70px'});
+            $("#menu-u2").animate({width: '70px'});
+            $("#menu-u3").animate({width: '70px'});
+            $("#menu-u4").animate({width: '70px'});
+            $("#menu-u5").animate({width: '70px'});
             $("#text-u0").hide();
             $("#text-u1").hide();
             $("#text-u2").hide();
             $("#text-u3").hide();
             $("#text-u4").hide();
             $("#text-u5").hide();
+            $("#text_nav").animate({left: '15px'});
+            $("#dw").animate({marginLeft:90});
         }
         else{
             $("#nav").animate({ width: '260px'});
             $("#menu").animate({width: '260px'});
-            $("#menu-u0").animate({width: '260px'});
-            $("#menu-u1").animate({width: '260px'});
-            $("#menu-u2").animate({width: '260px'});
-            $("#menu-u3").animate({width: '260px'});
-            $("#menu-u4").animate({width: '260px'});
-            $("#menu-u5").animate({width: '260px'},
+            $("#dw").animate({marginLeft:260});
+            $("#menu-u0").animate({width: '240px'});
+            $("#menu-u1").animate({width: '240px'});
+            $("#menu-u2").animate({width: '240px'});
+            $("#menu-u3").animate({width: '240px'});
+            $("#menu-u4").animate({width: '240px'});
+            $("#text_nav").animate({left: '90px'});
+            $("#menu-u5").animate({width: '240px'},
             function showtext(){
             $("#text-u0").show();
             $("#text-u1").show();

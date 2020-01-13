@@ -39,17 +39,8 @@ $result = mysqli_query($link, $ming);
 </head>
 
 <body>
-
-    <div id="head">
-        <img id="img_head" src="img/lie.png">
-        <div id="logo">
-            <p id="logo-text" style="color: #f35758">学生管理系统</p>
-        </div>
-        <p id="user-text" style="color: #f35758"><?php echo "用户:" . $_SESSION['username']; ?> </p>
-        <a id="exit-text" href="login.php" style="color: #f35758">退出</a>
-    </div>
     <div id="nav">
-        <p id="text_nav">导航</p>
+        <p id="text_nav">MENU</p>
         <div id="menu">
             <a id="menu-u0" href="index.php">
                 <img id="img-u0" src="img/u0-0.png"></img>
@@ -77,15 +68,23 @@ $result = mysqli_query($link, $ming);
             </a>
         </div>
     </div>
-    <div id="con">
+
+    <div id="dw">
+        <div id="head">
+            <img id="img_head" src="img/lie.png">
+            <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
+        </div>
+        <div id="con">
+            <p id="tda">管理员管理</p>
+        </div>
+        
+        <div id="can_title" >
+            <h2 id="can_text">修改添加等管理员信息</h2>
+            <p id="can_text2">谨慎修改</p>
+        </div>
+        
+        <div id="can">
         <table>
-            <tr>
-                <th colspan="7" id="tda">
-                    <p>管理员管理</p>
-                    <a href="php/insertadmin.php">
-                        <img src="img/add.png" id="add-img"></a>
-                </th>
-            </tr>
             <tr>
                 <th>序号</th>
                 <th>用户名</th>
@@ -116,7 +115,10 @@ $result = mysqli_query($link, $ming);
             }
             ?>
         </table>
-    </div>
+        </div>
+    </div>     
+
+    
 </body>
 
 </html>
