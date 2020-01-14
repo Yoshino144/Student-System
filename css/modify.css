@@ -1,117 +1,134 @@
 /* CSS Document */
 #menu{
     position: absolute;
-    background-color: #54DAEB;
+    background-color: #ffffff;
     width: 260px;
-    height: 420px;
-    top: 150px;
+    height: 90%;
+    top: 70px;
     left: 0px;
 }
 #menu-u0{
     position: absolute;
     background-color: #ffffff;
-    width: 260px;
+    width: 240px;
     height: 70px;
     top: 0px;
-    left: 0px;
+    left: 10px;
 }
 #menu-u1{
     position: absolute;
-    background-color: #ffffff;
-    width: 260px;
+    background-color: #6777ef;
+    width: 240px;
     height: 70px;
     top: 70px;
-    left: 0px;
+    left: 10px;
 }
 #menu-u2{
     position: absolute;
     background-color: #ffffff;
-    width: 260px;
+    width: 240px;
     height: 70px;
     top: 140px;
-    left: 0px;
+    left: 10px;
 }
 #menu-u3{
     position: absolute;
     background-color: #ffffff;
-    width: 260px;
+    width: 240px;
     height: 70px;
     top: 210px;
-    left: 0px;
+    left: 10px;
 }
 #menu-u4{
     position: absolute;
     background-color: #ffffff;
-    width: 260px;
+    width: 240px;
     height: 70px;
     top: 280px;
-    left: 0px;
+    left: 10px;
 }
 #menu-u5{
     position: absolute;
-    background-color: #16a085;
-    width: 260px;
+    background-color: #ffffff;
+    width: 240px;
     height: 70px;
     top: 350px;
-    left: 0px;
+    left: 10px;
 }
 #img-u0,#img-u1,#img-u2,#img-u3,#img-u4,#img-u5{
     position: absolute;
     width: 30px;
     height: 30px;
     top: 31%;
-    left: 30px;
+    left: 20px;
 }
-#text-u5{
+#text-u1{
     position: absolute;
     color: #ffffff;
     font-size: 20px;
-    top: 6%;
+    top:  23px;
     left: 34%;
 }
-#text-u1,#text-u2,#text-u3,#text-u4,#text-u0{
+#text-u0,#text-u2,#text-u3,#text-u4,#text-u5{
     position: absolute;
     color: #8a8a8a;
     font-size: 20px;
-    top: 6%;
+    top: 23px;
     left: 34%;
 }
-#tda{
-    height:70px;
-    background-color: #16a085;
-    font-size: 30px;
-    color: #ffffff;
-    box-shadow: 0px 2px 10px #a4a4a4;
-}
+
 table{
     border-collapse:collapse;
-     width:100%;
+    width:99%;
+    margin-left: 5.5px;
 }
-td{
-    height:100px;
+td,th{
+    height:50px;
     vertical-align:center;
     text-align:center;
 }
 table, th, td{
-/*    border: 1px solid blue;*/
+    border: 1px solid #e9eaef;
 }
 #delete-img,#modify-img{
     width: 26px;
     height: 26px;
 }
-input[type=submit],#button{
+#tda{
+    margin-bottom: 0;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #34395e;
+}
+#add-img{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 31px;
+    right: 35px;
+}
+input[type=submit],#button {
     color: #ffffff;
     border: none;
-    background-color: #0f9176;
+    background-color: #4680ff;
     width: 200px;
     height: 50px;
     box-shadow: 0px 0px 10px #c4c4c4;
 }
-#bb{
-    color: #ffffff;
-    border: none;
-    background-color: #5cbdaa;
-    width: 200px;
-    height: 50px;
-    box-shadow: 0px 0px 10px #c4c4c4;
-}
+table tr:first-child th:first-child {
+            border-top-left-radius: 5px;
+        }
+
+        table tr:first-child th:last-child {
+            border-top-right-radius: 5px;
+        }
+        table tr:last-child td:first-child {
+            border-bottom-left-radius: 5px;
+        }
+
+        table tr:last-child td:last-child {
+            border-bottom-right-radius: 5px;
+        }

@@ -28,73 +28,84 @@
     <script type="text/javascript" src="../js/index.js"></script>
     <link href="../css/modifyadmin.css" rel="stylesheet" type="text/css">
     <link href="../css/base.css" rel="stylesheet" type="text/css">
+    <style>
+        #can{
+            background-color: #f4f6f9;
+            box-shadow: 0 0px 0px #f4f6f9;
+        }
+    </style>
 </head>
 
 <body>
-    
-    <div id="head">
-        <img id="img_head" src="../img/lie.png">
-        <div id="logo">
-            <p id="logo-text" style="color: #f35758">学生管理系统</p>
-        </div>
-        <p id="user-text" style="color: #f35758"><?php echo "用户:" . $_SESSION['user_name']; ?> </p>
-        <a id="exit-text" href="../login.php" style="color: #f35758">退出</a>
-    </div>
-    <div id="nav">
-        <p id="text_nav" >导航</p>
-        <div id="menu" >
+<div id="nav">
+        <p id="text_nav">MENU</p>
+        <div id="menu">
             <a id="menu-u0" href="../index.php">
-                <img id="img-u0" src="../img/u0-0.png" ></img>
+                <img id="img-u0" src="../img/u0-0.png"></img>
                 <p id="text-u0">首 页</p>
             </a>
             <a id="menu-u1" href="../admin.php">
-                <img id="img-u1" src="../img/u1.png" ></img>
+                <img id="img-u1" src="../img/u1.png"></img>
                 <p id="text-u1">管理员管理</p>
             </a>
             <a id="menu-u2" href="../college.php">
-                <img id="img-u2" src="../img/u2-2.png" ></img>
+                <img id="img-u2" src="../img/u2-2.png"></img>
                 <p id="text-u2">学院管理</p>
             </a>
             <a id="menu-u3" href="../major.php">
-                <img id="img-u3" src="../img/u3-3.png" ></img>
+                <img id="img-u3" src="../img/u3-3.png"></img>
                 <p id="text-u3">专业管理</p>
             </a>
             <a id="menu-u4" href="../class.php">
-                <img id="img-u4" src="../img/u4-4.png" ></img>
+                <img id="img-u4" src="../img/u4-4.png"></img>
                 <p id="text-u4">班级管理</p>
             </a>
             <a id="menu-u5" href="../student.php">
-                <img id="img-u5" src="../img/u5-5.png" ></img>
+                <img id="img-u5" src="../img/u5-5.png"></img>
                 <p id="text-u5">学生信息管理</p>
             </a>
         </div>
     </div>
-    <div id="con">
+
+    <div id="dw">
+        <div id="head">
+            <img id="img_head" src="../img/lie.png">
+            <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
+        </div>
+        <div id="con">
+            <p id="tda">修改管理员信息</p>
+        </div>
+        
+        <div id="can_title" >
+            <h2 id="can_text">修改管理员信息</h2>
+            <p id="can_text2">谨慎修改 无法撤销</p>
+        </div>
+        <div id="can"  >
         <form method="post" action="modadmin.php">
             <table>
                 <tr>
-                    <td colspan="3" id="tda" >修改&nbsp;&nbsp;<?php echo $row['user_name']; ?>&nbsp;&nbsp;管理员的信息</td>
+                    <td id="td1"><h1 style="color:#6c757d;">id:</h1><br>    <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "><br><br>
+                        <p id="td-text">不可修改。</br>&nbsp;</p></td>
+                    <td id="tdd">&nbsp;</td>
+                    <td id="td1"><h1 style="color:#6c757d;">用户名:</h1><br>     <input name="user_name" type="text" value=" <?php echo $row['user_name']; ?> "><br><br>
+                    <p id="td-text">可由4—10个字母、数字、汉字或下划线等字符组成。</p></td>
+                    <td id="tdd">&nbsp;</td>
+                    <td id="td1"><h1 style="color:#6c757d;">账号:</h1><br>    <input name="number" type="text" value=" <?php echo $row['number']; ?> "><br><br>
+                    <p id="td-text">可由4—10个字母、数字或下划线等字符组成。</p></td>
+                    <td id="tdd">&nbsp;</td>
+                    <td id="td1"><h1 style="color:#6c757d;">密码:</h1><br>   <input name="password" type="text" value=" <?php echo $row['password']; ?> "><br><br>
+                    <p id="td-text">不少于8位的字母、数字字符组成。</br>&nbsp;</p></td>
                 </tr>
+                <tr id="trr"></tr>
                 <tr>
-                    <td>id:    <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "></td>
-                </tr>
-                <tr>
-                    <td>用户名:    <input name="user_name" type="text" value=" <?php echo $row['user_name']; ?> "></td>
-                </tr>
-                <tr>
-                    <td>账号:    <input name="number" type="text" value=" <?php echo $row['number']; ?> "></td>
-                </tr>
-                <tr>
-                    <td>密码:  <input name="password" type="text" value=" <?php echo $row['password']; ?> "></td>
-                </tr>
-                <tr>
-                    <td colspan="3">
+                    <td colspan="7">
                         <input id="button" type="submit" value="确定" >
                     </td>
                 </tr>
             </table>
         </form>
     </div>
+        </div>
     
 </body>
 </html>

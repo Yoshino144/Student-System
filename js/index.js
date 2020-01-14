@@ -21,6 +21,12 @@ $(document).ready(function () {
         if ($("#nav").css("width") == "260px"){
             $("#nav").animate({width: '90px'});
             $("#menu").animate({width: '90px'});
+            $("#img-u0").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
+            $("#img-u1").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
+            $("#img-u2").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
+            $("#img-u3").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
+            $("#img-u4").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
+            $("#img-u5").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
             $("#menu-u0").animate({width: '70px'});
             $("#menu-u1").animate({width: '70px'});
             $("#menu-u2").animate({width: '70px'});
@@ -40,6 +46,12 @@ $(document).ready(function () {
             $("#nav").animate({ width: '260px'});
             $("#menu").animate({width: '260px'});
             $("#dw").animate({marginLeft:260});
+            $("#img-u0").animate({width:'30px',height:'30px',top: '31%',left: '20px'});
+            $("#img-u1").animate({width:'30px',height:'30px',top: '31%',left: '20px'});
+            $("#img-u2").animate({width:'30px',height:'30px',top: '31%',left: '20px'});
+            $("#img-u3").animate({width:'30px',height:'30px',top: '31%',left: '20px'});
+            $("#img-u4").animate({width:'30px',height:'30px',top: '31%',left: '20px'});
+            $("#img-u5").animate({width:'30px',height:'30px',top: '31%',left: '20px'});
             $("#menu-u0").animate({width: '240px'});
             $("#menu-u1").animate({width: '240px'});
             $("#menu-u2").animate({width: '240px'});

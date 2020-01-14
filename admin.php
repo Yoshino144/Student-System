@@ -81,7 +81,8 @@ $result = mysqli_query($link, $ming);
         <div id="can_title" >
             <h2 id="can_text">修改添加等管理员信息</h2>
             <p id="can_text2">谨慎修改</p>
-        </div>
+        </div><a href="php/insertadmin.php">
+        <img src="img/add.png" id="can_img" ></img></a>
         
         <div id="can">
         <table>
