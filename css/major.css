@@ -15,6 +15,9 @@
     top: 0px;
     left: 10px;
 }
+#menu-u0:hover{
+    background-color: #f4f6f9;
+}
 #menu-u1{
     position: absolute;
     background-color: #ffffff;
@@ -23,6 +26,9 @@
     top: 70px;
     left: 10px;
 }
+#menu-u1:hover{
+    background-color: #f4f6f9;
+}
 #menu-u2{
     position: absolute;
     background-color: #ffffff;
@@ -30,6 +36,9 @@
     height: 70px;
     top: 140px;
     left: 10px;
+}
+#menu-u2:hover{
+    background-color: #f4f6f9;
 }
 #menu-u3{
     position: absolute;
@@ -47,6 +56,9 @@
     top: 280px;
     left: 10px;
 }
+#menu-u4:hover{
+    background-color: #f4f6f9;
+}
 #menu-u5{
     position: absolute;
     background-color: #ffffff;
@@ -54,6 +66,9 @@
     height: 70px;
     top: 350px;
     left: 10px;
+}
+#menu-u5:hover{
+    background-color: #f4f6f9;
 }
 #img-u0,#img-u1,#img-u2,#img-u3,#img-u4,#img-u5{
     position: absolute;

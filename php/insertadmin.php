@@ -19,6 +19,12 @@
     <script type="text/javascript" src="../js/index.js"></script>
     <link href="../css/modifyadmin.css" rel="stylesheet" type="text/css">
     <link href="../css/base.css" rel="stylesheet" type="text/css">
+    <style>
+        #can{
+            background-color: #f4f6f9;
+            box-shadow: 0 0px 0px #f4f6f9;
+        }
+    </style>
 </head>
 
 <body>
@@ -62,7 +68,7 @@
         </div>
         
         <div id="can_title" >
-            <h2 id="can_text">修改添加等管理员信息</h2>
+            <h2 id="can_text">添加管理员信息</h2>
             <p id="can_text2">谨慎修改</p>
         </div><a href="php/insertadmin.php">
         <img src="../img/add.png" id="can_img" ></img></a>

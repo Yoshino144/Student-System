@@ -62,12 +62,19 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
             <img id="img_head" src="img/lie.png">
             <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
 <!--            <a id="exit-text" href="login.php" style="color: #57585d" >退出</a>-->
+            <img src="img/more.png" id="head-more">
         </div>
         <div id="con">
         </div>
     </div>                
         
-   
+    <div id="more">
+        <a href="login.php" style="text-decoration:none;">
+            <img src="img/exit.png" id="exit-img">
+                <p id="exit-text">退出系统</p>
+            </a>
+    </div>
+    
 </body>
 
 </html>

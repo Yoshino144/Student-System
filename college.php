@@ -77,6 +77,7 @@ function modify_college(id){
         <div id="head">
             <img id="img_head" src="img/lie.png">
             <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
+            <img src="img/more.png" id="head-more">
         </div>
         <div id="con">
             <p id="tda">学院管理</p>
@@ -85,7 +86,8 @@ function modify_college(id){
         <div id="can_title" >
             <h2 id="can_text">修改添加学院信息</h2>
             <p id="can_text2">谨慎修改</p>
-        </div>
+        </div><a href="php/insertcollege.php">
+        <img src="img/add.png" id="can_img" ></img></a>
         
         <div id="can">
         <table>
@@ -116,7 +118,14 @@ function modify_college(id){
             ?>
         </table>
         </div>
-    </div> 
+    </div>                 
+        
+    <div id="more">
+        <a href="login.php" style="text-decoration:none;">
+            <img src="img/exit.png" id="exit-img">
+                <p id="exit-text">退出系统</p>
+            </a>
+    </div>
     
 </body>
 

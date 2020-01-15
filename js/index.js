@@ -14,13 +14,32 @@ function modify_js(id){
 }
 
 
-
 //侧边栏动画
 $(document).ready(function () {
+    $("#more").hide();
+    $("#head-more,#user-text").mouseover(function () {
+        $("#more").fadeIn();
+    });
+    
+    $("#head-more,#user-text").mouseout(function () {
+        setTimeout(function () {
+            $("#more").fadeOut();
+        },1000);
+    });
+    
+    $("#text_nav").mouseover(function () {
+        $("#text_nav").animate({fontSize:'30px',left: '80px',top: '18px'});
+    });
+    
+    $("#text_nav").mouseout(function () {
+        $("#text_nav").animate({fontSize:'20px',left: '90px',top: '25px'});
+    });
+    
     $("#img_head").click(function () {
         if ($("#nav").css("width") == "260px"){
             $("#nav").animate({width: '90px'});
             $("#menu").animate({width: '90px'});
+            $("#text_nav").animate({left: '15px'});
             $("#img-u0").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
             $("#img-u1").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
             $("#img-u2").animate({width:'40px',height:'40px',top: '22%',left: '15px'});
@@ -39,7 +58,6 @@ $(document).ready(function () {
             $("#text-u3").hide();
             $("#text-u4").hide();
             $("#text-u5").hide();
-            $("#text_nav").animate({left: '15px'});
             $("#dw").animate({marginLeft:90});
         }
         else{

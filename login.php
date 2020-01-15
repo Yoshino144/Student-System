@@ -6,6 +6,7 @@
     <title>无标题文档</title>
 <link href="css/login.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.particleground.js"></script>
     <script type="text/javascript">
 
     $(document).ready(function(){
@@ -18,6 +19,15 @@
     });
     };
         
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      particleground(document.getElementById('particles'), {
+        dotColor: '#5cbdaa',
+        lineColor: '#5cbdaa'
+      });
+      var intro = document.getElementById('intro');
+      intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
+    }, false);
     </script>
 </head>
 
@@ -62,10 +72,7 @@
         return $data;
     }
     ?>
-    
-    <div id="bg">
-        <div id="bg_1"></div>
-        <div id="bg_2"></div>
+    <div id="container">
         <div id="bg_3"></div>
         <div id="bg_4"></div>
         <div id="bg_text">
@@ -81,7 +88,7 @@
                 <?php if ($ad == 1) echo "<script type=text/javascript>aa()</script>" ?>
             </form>
         </div>
-    </div>
+        </div>
 </body>
 
 </html>

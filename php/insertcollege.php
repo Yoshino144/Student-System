@@ -18,20 +18,18 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
     <script type="text/javascript" src="../js/index.js"></script>
     <link href="../css/modifycollege.css" rel="stylesheet" type="text/css">
     <link href="../css/base.css" rel="stylesheet" type="text/css">
+    <style>
+        #can{
+            background-color: #f4f6f9;
+            box-shadow: 0 0px 0px #f4f6f9;
+        }
+    </style>
 </head>
 
 <body>
-
-    <div id="head">
-        <img id="img_head" src="../img/lie.png">
-        <div id="logo">
-            <p id="logo-text" style="color: #6da460">学生管理系统</p>
-        </div>
-        <p id="user-text" style="color: #6da460"><?php echo "用户:" . $_SESSION['username']; ?> </p>
-        <a id="exit-text" href="login.php" style="color: #6da460">退出</a>
-    </div>
+  
     <div id="nav">
-        <p id="text_nav">导航</p>
+        <p id="text_nav">MENU</p>
         <div id="menu">
             <a id="menu-u0" href="../index.php">
                 <img id="img-u0" src="../img/u0-0.png"></img>
@@ -59,21 +57,35 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
             </a>
         </div>
     </div>
-    <div id="con">
+
+    <div id="dw">
+        <div id="head">
+            <img id="img_head" src="../img/lie.png">
+            <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
+        </div>
+        <div id="con">
+            <p id="tda">学院管理</p>
+        </div>
+        
+        <div id="can_title" >
+            <h2 id="can_text">添加学院信息</h2>
+            <p id="can_text2">谨慎修改</p>
+        </div>
+        
+        <div id="can">
         <form method="post" action="incollege.php">
             <table>
                 <tr>
-                    <td colspan="3" id="tda"> 添加学院信息 </td>
+                    <td id="td1"><h1 style="color:#6c757d;">id</h1> <br>    <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "><br><br>
+                     <p id="td-text" style="margin-left: 55px;">不可修改。</p></td>
+                    <td id="tdd">&nbsp;</td>
+                    <td id="td1"><h1 style="color:#6c757d;">学院名</h1><br>     <input name="college_name" type="text" value=" <?php echo $row['college_name']; ?> "><br><br>
+                    <p id="td-text" style="margin-left: 55px;">可由1—30个汉字或字母字符组成。</p></td>
                 </tr>
-                <tr>
-                    <td>序号: <input readonly="readonly" name="id" type="text" ></td>
-                </tr>
-                <tr>
-                    <td>学院名: <input name="college_name" type="text" ></td>
-                </tr>
+                <tr id="trr"></tr>
                 <tr>
                     <td colspan="3">
-                        <input type="submit" value="确定">
+                        <input id="button" type="submit" value="确定" >
                     </td>
                 </tr>
             </table>

@@ -73,27 +73,27 @@
             <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
         </div>
         <div id="con">
-            <p id="tda">修改管理员信息</p>
+            <p id="tda">管理员管理</p>
         </div>
         
         <div id="can_title" >
-            <h2 id="can_text">修改管理员信息</h2>
+            <h2 id="can_text">修改 <?php echo $row['user_name']; ?> 管理员信息</h2>
             <p id="can_text2">谨慎修改 无法撤销</p>
         </div>
         <div id="can"  >
         <form method="post" action="modadmin.php">
             <table>
                 <tr>
-                    <td id="td1"><h1 style="color:#6c757d;">id:</h1><br>    <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "><br><br>
+                    <td id="td1"><h1 style="color:#6c757d;">id</h1><br>    <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "><br><br>
                         <p id="td-text">不可修改。</br>&nbsp;</p></td>
                     <td id="tdd">&nbsp;</td>
-                    <td id="td1"><h1 style="color:#6c757d;">用户名:</h1><br>     <input name="user_name" type="text" value=" <?php echo $row['user_name']; ?> "><br><br>
+                    <td id="td1"><h1 style="color:#6c757d;">用户名</h1><br>     <input name="user_name" type="text" value=" <?php echo $row['user_name']; ?> "><br><br>
                     <p id="td-text">可由4—10个字母、数字、汉字或下划线等字符组成。</p></td>
                     <td id="tdd">&nbsp;</td>
-                    <td id="td1"><h1 style="color:#6c757d;">账号:</h1><br>    <input name="number" type="text" value=" <?php echo $row['number']; ?> "><br><br>
+                    <td id="td1"><h1 style="color:#6c757d;">账号</h1><br>    <input name="number" type="text" value=" <?php echo $row['number']; ?> "><br><br>
                     <p id="td-text">可由4—10个字母、数字或下划线等字符组成。</p></td>
                     <td id="tdd">&nbsp;</td>
-                    <td id="td1"><h1 style="color:#6c757d;">密码:</h1><br>   <input name="password" type="text" value=" <?php echo $row['password']; ?> "><br><br>
+                    <td id="td1"><h1 style="color:#6c757d;">密码</h1><br>   <input name="password" type="text" value=" <?php echo $row['password']; ?> "><br><br>
                     <p id="td-text">不少于8位的字母、数字字符组成。</br>&nbsp;</p></td>
                 </tr>
                 <tr id="trr"></tr>

@@ -17,17 +17,53 @@ body {
     width: 35px;
     height: 35px;
     margin-left: 20px;
-    margin-top: 18px
+    margin-top: 18px;
+    -webkit-transition: -webkit-transform 1s;
+}
+#img_head:hover{
+    transform:rotate(180deg);
+}
+#head-more{
+    -webkit-transition: -webkit-transform 1s;
+    width:11px;
+    height:7px;
+    position: absolute;
+    right: 39px;
+    top: 33px;
+}
+#head-more:hover{
+    transform:rotate(180deg);
+}
+#more{
+    width:200px;
+    height:50px;
+    position: absolute;
+    background-color: #ffffff;
+    top:50px;
+    right: 30px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+#exit-img{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+#exit-text{
+    margin-left: 57px;
+    margin-top: -25px;
+    color:#d81e06;
 }
 #user-text {
     color: #ffffff;
     position: absolute;
-    right: 30px;
+    right: 58px;
     top: 25px;
     font-size: 18px;
 }
 #nav {
-    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.03);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 99;
     float: left;
     width: 260px;
@@ -47,7 +83,7 @@ body {
     margin-left: 35px;
     margin-top: -45px;
     margin-right: 35px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 99;
     border-radius: 4px;
 }
@@ -58,7 +94,7 @@ body {
     margin-left: 35px;
     margin-top: 55px;
     margin-right: 35px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    box-shadow:2px 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 99;
     border-radius: 4px;
     padding-top: 5.5px;
@@ -98,7 +134,7 @@ body {
 #can_img{
     position: absolute;
     color: #6c757d;
-    top: 168px;
+    top: 165px;
     right: 50px;
     width: 60px;
     height: 60px;
@@ -109,7 +145,7 @@ body {
     height: 300px;
     margin-left: 35px;
     margin-top: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    box-shadow:2px 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 100;
     border-radius: 4px;
     padding-top: 5.5px;

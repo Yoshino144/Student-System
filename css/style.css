@@ -1,0 +1,45 @@
+html, body {
+  width: 100%;
+  height: 100%;
+    overflow: hidden;
+}
+body {
+  background: #16a085;
+}
+#particles {
+  width: 100%;
+  height: 100%;
+    overflow: hidden;
+}
+#login{
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    top:18%;
+    left:38%;
+    background-color: #ffffff;
+}
+#text-one{
+    position: absolute;
+    font-size: 80px;
+    color: #ffffff;
+    top:22%;
+    left:33.5%;
+    letter-spacing:6px;
+}
+#text-two{
+    position: absolute;
+    background-color: #ffffff;
+    top:46%;
+    left:47%;
+    width: 100px;
+    height: 10px;
+}
+#text-three{
+    position: absolute;
+    font-size: 24px;
+    color: #ffffff;
+    top:53%;
+    left:43.5%;
+    letter-spacing:6px;
+}

@@ -62,6 +62,7 @@
         <div id="head">
             <img id="img_head" src="img/lie.png">
             <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
+            <img src="img/more.png" id="head-more">
         </div>
         <div id="con">
             <p id="tda">学生管理</p>
@@ -116,6 +117,13 @@
             ?>
         </table>
     </div>
-         </div>
+         </div>                
+        
+    <div id="more">
+        <a href="login.php" style="text-decoration:none;">
+            <img src="img/exit.png" id="exit-img">
+                <p id="exit-text">退出系统</p>
+            </a>
+    </div>
 </body>
 </html>
