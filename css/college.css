@@ -92,19 +92,6 @@
     left: 34%;
 }
 
-table{
-    border-collapse:collapse;
-    width:99%;
-    margin-left: 5.5px;
-}
-td,th{
-    height:50px;
-    vertical-align:center;
-    text-align:center;
-}
-table, th, td{
-    border: 1px solid #e9eaef;
-}
 #delete-img,#modify-img{
     width: 26px;
     height: 26px;

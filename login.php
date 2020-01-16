@@ -1,39 +1,28 @@
 <!doctype html>
-<html>
-
+<html lang="en" class="no-js">
 <head>
-    <meta charset="utf-8">
-    <title>无标题文档</title>
-<link href="css/login.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.particleground.js"></script>
-    <script type="text/javascript">
-
-    $(document).ready(function(){
-        $("#tws_img").hide();
-    });
-        
-    function aa(){
-        $(document).ready(function(){
-        $("#tws_img").fadeIn(1000);
-    });
-    };
-        
-    
-    document.addEventListener('DOMContentLoaded', function () {
-      particleground(document.getElementById('particles'), {
-        dotColor: '#5cbdaa',
-        lineColor: '#5cbdaa'
-      });
-      var intro = document.getElementById('intro');
-      intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
-    }, false);
+  <meta charset="UTF-8" />
+  <title>学生管理系统</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.particleground.js"></script>
+  <script type="text/javascript" src="js/demo.js"></script>
+  <script type="text/javascript" src="js/layer/layer.js"></script>
+  <script>
+        $(document).ready(function () {
+            $("#login").hide();
+            $("#particles").click(function aa(){
+                $("#text-one").fadeOut(700);
+                $("#text-two").fadeOut(800);
+                $("#text-three").fadeOut(900);
+                $("#login").fadeIn(1000);
+            });
+        });
     </script>
 </head>
 
 <body>
-
-    <?php
+<?php
     $showtime = date("Y-m-d H:i:s");
     unset($_SESSION['username']);
     $serve = 'localhost:3306';
@@ -60,8 +49,19 @@
             $sql = "UPDATE admin SET last_time = '" . $showtime . "' WHERE user_name = '" . $username . "' ";
             mysqli_query($link, $sql);
             header("location:index.php");
-        } else {
-            $ad = 1;
+        } else if($username == "" || $password==""){
+            
+                echo "<script>layer.msg('账号密码不能为空！！！', function(){  $(\"#text-one\").fadeOut(700);
+                $(\"#text-two\").fadeOut(800);
+                $(\"#text-three\").fadeOut(900);
+                $(\"#login\").fadeIn(1000);});</script>";
+        }
+        
+        else  {
+            echo "<script>layer.msg('密码错误，请重新登录！！！', function(){  $(\"#text-one\").fadeOut(700);
+                $(\"#text-two\").fadeOut(800);
+                $(\"#text-three\").fadeOut(900);
+                $(\"#login\").fadeIn(1000);});</script>";
         }
     }
     function test_input($data)
@@ -72,23 +72,24 @@
         return $data;
     }
     ?>
-    <div id="container">
-        <div id="bg_3"></div>
-        <div id="bg_4"></div>
-        <div id="bg_text">
-            <p id="text" >学生管理系统</p>
-        </div>
-        <div id="input1">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <input type="text" name="username" placeholder="用户名"><br>
-                <input type="text" name="password" placeholder="密码"><br>
-                <img id="tws_img" src="img/tws.png">
-                <a href="#" id="forget">忘记密码</a><br>
-                <input type="submit"><br>
-                <?php if ($ad == 1) echo "<script type=text/javascript>aa()</script>" ?>
+<div id="particles">
+    
+    <h1 id="text-one">学生管理系统</h1>
+    <h1 id="text-two"></h1>
+    <h1 id="text-three">点击任意处登录</h1>
+    
+    <div id="login">
+        <p id="login-text-1">登录</p>
+        <p id="login-text-2">Welcome back</p>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <p id="nametext">账号</p>
+                <input type="text" name="username" placeholder="请输入你的用户名或者账号"><br>
+            <p id="pswtext">密码</p>
+                <input type="text" name="password" placeholder="请输入密码"></br></br>
+                <a href="#" id="forget">忘记密码？</a><br>
+                <input type="submit" id="submit"><br>
             </form>
-        </div>
-        </div>
+    </div>
+</div>
 </body>
-
 </html>

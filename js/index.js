@@ -1,5 +1,4 @@
 // JavaScript Document
-
 //student.php
 function delete_js(id){
     var r=confirm("是否确认删除"+id);

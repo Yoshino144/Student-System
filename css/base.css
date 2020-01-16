@@ -75,6 +75,12 @@ body {
     position: absolute;
     left: 90px;
     top: 25px;
+    -webkit-transition: font-size 1s,left 1s,top 1s;
+}
+#text_nav:hover{
+    font-size:30px;
+    left: 80px;
+    top: 18px;
 }
 #con{
     background-color: #ffffff;
@@ -162,4 +168,8 @@ body {
 }
 #tdd{
     width:2%;
+}
+#ccan{
+    margin-left: 15px;
+    width: 97.5%;
 }

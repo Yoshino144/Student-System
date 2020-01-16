@@ -9,8 +9,3 @@ document.addEventListener('DOMContentLoaded', function () {
   intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
 }, false);
 
-$(document).ready(function () {
-    $("#text-one").click(function(){
-        $("#text-one").hide();
-    });
-});
