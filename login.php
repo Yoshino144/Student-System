@@ -87,7 +87,7 @@
             <p id="pswtext">密码</p>
                 <input type="text" name="password" placeholder="请输入密码"></br></br>
                 <a href="#" id="forget">忘记密码？</a><br>
-                <input type="submit" id="submit"><br>
+                <input type="submit" id="submit" value="登录"><br>
             </form>
     </div>
 </div>

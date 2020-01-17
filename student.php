@@ -24,6 +24,23 @@
     <script type="text/javascript" src="js/index.js"></script>
     <link href="css/student.css" rel="stylesheet" type="text/css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/layer/layer.js"></script>
+    <script>
+
+function modify_js(id) {
+    window.location.href = 'http://localhost/pro/php/modify.php?operation=modify&id=' + id;
+}
+        
+         function delete_js(id) {
+            layer.open({
+              content: '是否确认删除'
+              ,btn: ['删除', '取消']
+              ,yes: function(index, layero){
+                 window.location.href = 'http://localhost/pro/php/operation.php?operation=delete&id=' + id;
+              }
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -52,8 +69,8 @@
                 <p id="text-u4">班级管理</p>
             </a>
             <a id="menu-u5" href="student.php">
-                <img id="img-u5" src="img/u5.png"></img>
-                <p id="text-u5">学生信息管理</p>
+                <img id="img-u5" src="img/u5.png" class="layui-anim layui-anim-scaleSpring"></img>
+                <p id="text-u5" class="layui-anim layui-anim-scaleSpring">学生信息管理</p>
             </a>
         </div>
     </div>

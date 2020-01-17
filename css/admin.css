@@ -1,5 +1,5 @@
 /* CSS Document */
-#menu{
+#menu {
     position: absolute;
     background-color: #ffffff;
     width: 260px;
@@ -7,7 +7,7 @@
     top: 70px;
     left: 0px;
 }
-#menu-u0{
+#menu-u0 {
     position: absolute;
     background-color: #ffffff;
     width: 240px;
@@ -15,10 +15,10 @@
     top: 0px;
     left: 10px;
 }
-#menu-u0:hover{
+#menu-u0:hover {
     background-color: #f4f6f9;
 }
-#menu-u1{
+#menu-u1 {
     position: absolute;
     background-color: #6777ef;
     width: 240px;
@@ -26,7 +26,7 @@
     top: 70px;
     left: 10px;
 }
-#menu-u2{
+#menu-u2 {
     position: absolute;
     background-color: #ffffff;
     width: 240px;
@@ -34,10 +34,10 @@
     top: 140px;
     left: 10px;
 }
-#menu-u2:hover{
+#menu-u2:hover {
     background-color: #f4f6f9;
 }
-#menu-u3{
+#menu-u3 {
     position: absolute;
     background-color: #ffffff;
     width: 240px;
@@ -45,10 +45,10 @@
     top: 210px;
     left: 10px;
 }
-#menu-u3:hover{
+#menu-u3:hover {
     background-color: #f4f6f9;
 }
-#menu-u4{
+#menu-u4 {
     position: absolute;
     background-color: #ffffff;
     width: 240px;
@@ -56,10 +56,10 @@
     top: 280px;
     left: 10px;
 }
-#menu-u4:hover{
+#menu-u4:hover {
     background-color: #f4f6f9;
 }
-#menu-u5{
+#menu-u5 {
     position: absolute;
     background-color: #ffffff;
     width: 240px;
@@ -67,36 +67,35 @@
     top: 350px;
     left: 10px;
 }
-#menu-u5:hover{
+#menu-u5:hover {
     background-color: #f4f6f9;
 }
-#img-u0,#img-u1,#img-u2,#img-u3,#img-u4,#img-u5{
+#img-u0, #img-u1, #img-u2, #img-u3, #img-u4, #img-u5 {
     position: absolute;
     width: 30px;
     height: 30px;
     top: 31%;
     left: 20px;
 }
-#text-u1{
+#text-u1 {
     position: absolute;
     color: #ffffff;
     font-size: 20px;
-    top:  23px;
+    top: 23px;
     left: 34%;
 }
-#text-u0,#text-u2,#text-u3,#text-u4,#text-u5{
+#text-u0, #text-u2, #text-u3, #text-u4, #text-u5 {
     position: absolute;
     color: #8a8a8a;
     font-size: 20px;
     top: 23px;
     left: 34%;
 }
-
-#delete-img,#modify-img{
+#delete-img, #modify-img {
     width: 26px;
     height: 26px;
 }
-#tda{
+#tda {
     margin-bottom: 0;
     font-weight: 700;
     display: inline-block;
@@ -105,14 +104,14 @@
     margin-left: 20px;
     color: #34395e;
 }
-#add-img{
+#add-img {
     position: absolute;
     width: 40px;
     height: 40px;
     top: 31px;
     right: 35px;
 }
-input[type=submit],#button {
+input[type=submit], #button {
     color: #ffffff;
     border: none;
     background-color: #4680ff;
@@ -121,16 +120,14 @@ input[type=submit],#button {
     box-shadow: 0px 0px 10px #c4c4c4;
 }
 table tr:first-child th:first-child {
-            border-top-left-radius: 5px;
-        }
-
-        table tr:first-child th:last-child {
-            border-top-right-radius: 5px;
-        }
-        table tr:last-child td:first-child {
-            border-bottom-left-radius: 5px;
-        }
-
-        table tr:last-child td:last-child {
-            border-bottom-right-radius: 5px;
-        }
+    border-top-left-radius: 5px;
+}
+table tr:first-child th:last-child {
+    border-top-right-radius: 5px;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}

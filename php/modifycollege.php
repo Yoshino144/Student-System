@@ -87,10 +87,10 @@
             <table>
                 <tr>
                     <td id="td1"><h1 style="color:#6c757d;">id</h1> <br>    <input readonly="readonly" name="id" type="text" value=" <?php echo $row['id']; ?> "><br><br>
-                     <p id="td-text">不可修改。</p></td>
+                     <p id="td-text" style="margin-left: 55px;">不可修改。</br>&nbsp;</p></td>
                     <td id="tdd">&nbsp;</td>
                     <td id="td1"><h1 style="color:#6c757d;">学院名</h1><br>     <input name="college_name" type="text" value=" <?php echo $row['college_name']; ?> "><br><br>
-                    <p id="td-text">可由1—30个汉字或字母字符组成。</p></td>
+                    <p id="td-text" style="margin-left: 55px;">可由1—30个汉字或字母字符组成。</br>&nbsp;</p></td>
                 </tr>
                 <tr id="trr"></tr>
                 <tr>

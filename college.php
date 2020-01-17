@@ -23,21 +23,25 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
     <title>学院管理</title>
     <script type="text/javascript" src="js/layui/layui.all.js"></script>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/layer/layer.js"></script>
     <link href="css/college.css" rel="stylesheet" type="text/css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
     <link href="js/layui/css/layui.css" rel="stylesheet" media="all">
     <script>
-        function delete_college(id){
-    var r=confirm("是否确认删除"+id);
-    if (r==true)
-    {
-        window.location.href = 'http://localhost/pro/php/operation.php?operation=deletecollege&id=' + id;
-    }
-}
 
-function modify_college(id){
-    window.location.href = 'http://localhost/pro/php/modifycollege.php?operation=modify&id=' + id;
-}
+        function delete_college(id) {
+            layer.open({
+              content: '是否确认删除'
+              ,btn: ['删除', '取消']
+              ,yes: function(index, layero){
+                window.location.href = 'http://localhost/pro/php/operation.php?operation=deletecollege&id=' + id;
+              }
+            });
+        }
+        
+    function modify_college(id){
+        window.location.href = 'http://localhost/pro/php/modifycollege.php?operation=modify&id=' + id;
+    }
         
         $(document).ready(function () {
     $("#more").hide();
@@ -51,13 +55,6 @@ function modify_college(id){
         },1000);
     });
     
-    $("#text_nav").mouseover(function () {
-        $("#text_nav").animate({fontSize:'30px',left: '80px',top: '18px'});
-    });
-    
-    $("#text_nav").mouseout(function () {
-        $("#text_nav").animate({fontSize:'20px',left: '90px',top: '25px'});
-    });
     
     $("#img_head").click(function () {
         if ($("#nav").css("width") == "260px"){
@@ -84,7 +81,7 @@ function modify_college(id){
             $("#text-u5").hide();
             $("#dw").animate({marginLeft:90},
                             function aa(){
-                table.resize('atable');
+                layui.table.resize('atable');
             });
         }
         else{
@@ -111,7 +108,7 @@ function modify_college(id){
             $("#text-u3").show();
             $("#text-u4").show();
             $("#text-u5").show();
-            table.resize('atable');
+            layui.table.resize('atable');
             });
         }
     });
@@ -136,8 +133,8 @@ function modify_college(id){
                 <p id="text-u1">管理员管理</p>
             </a>
             <a id="menu-u2" href="college.php">
-                <img id="img-u2" src="img/u2.png"></img>
-                <p id="text-u2">学院管理</p>
+                <img id="img-u2" src="img/u2.png" class="layui-anim layui-anim-up"></img>
+                <p id="text-u2" class="layui-anim layui-anim-up">学院管理</p>
             </a>
             <a id="menu-u3" href="major.php">
                 <img id="img-u3" src="img/u3-3.png"></img>
@@ -160,17 +157,17 @@ function modify_college(id){
             <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
             <img src="img/more.png" id="head-more">
         </div>
-        <div id="con">
+        <div id="con" class="layui-anim layui-anim-scale">
             <p id="tda">学院管理</p>
         </div>
         
-        <div id="can_title" >
+        <div id="can_title" class="layui-anim layui-anim-scale">
             <h2 id="can_text">修改添加学院信息</h2>
             <p id="can_text2">谨慎修改</p>
         </div><a href="php/insertcollege.php">
-        <img src="img/add.png" id="can_img" ></img></a>
+        <img src="img/add.png" id="can_img" class="layui-anim layui-anim-scale"></img></a>
         
-        <div id="can">
+        <div id="can" class="layui-anim layui-anim-up">
             <div id="ccan">
         <table lay-filter="demo" id="atable">
             <thead>
