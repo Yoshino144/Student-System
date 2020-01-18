@@ -16,14 +16,20 @@
         $user_name = test_input($_POST["user_name"]);
         $number = test_input($_POST["number"]);
         $password = test_input($_POST["password"]);
+        $showtime = date("Y-m-d H:i:s");
         $update = 'UPDATE admin SET user_name="' . $user_name .'",number="' . $number . '",password="' . $password .'" where id=' . $id;
         echo $update;
+        
+        
         
         if($id!="")
         {
             $res=mysqli_query($link,$update);
             if($res>0){
                 echo "<script>alert('操作成功');</script>";
+                $ming2='INSERT INTO cz (cz,ct) VALUES(" ' . $_SESSION['username']. ' 修改了 <b>' . $user_name . '<\b> 管理员信息' .' ","' . $showtime . '")';
+        echo $ming2;
+        $res2=mysqli_query($link,$ming2);
                 header("Location: ../admin.php");
             }
             else{

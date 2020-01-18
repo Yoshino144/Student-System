@@ -9,13 +9,19 @@
   <script type="text/javascript" src="js/demo.js"></script>
   <script type="text/javascript" src="js/layer/layer.js"></script>
   <script>
+      console.log(navigator.userAgent);
+      var u_agent = navigator.userAgent; 
+      if(u_agent.indexOf('Edge')>-1){
+            layer.msg('推荐使用支持WebKit的浏览器进行访问，如Chrome，Safari等');
+      }
+      
         $(document).ready(function () {
             $("#login").hide();
             $("#particles").click(function aa(){
-                $("#text-one").fadeOut(700);
-                $("#text-two").fadeOut(800);
-                $("#text-three").fadeOut(900);
-                $("#login").fadeIn(1000);
+                $("#text-one").fadeOut(500);
+                $("#text-two").fadeOut(500);
+                $("#text-three").fadeOut(500);
+                $("#login").fadeIn(500);
             });
         });
     </script>

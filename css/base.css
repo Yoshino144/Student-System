@@ -50,9 +50,9 @@ body {
     margin-left: 15px;
     margin-top: 15px;
 }
-#exit-text {
+#exit-text{
     margin-left: 57px;
-    margin-top: -25px;
+    margin-top: -20px;
     color: #d81e06;
 }
 #user-text {
@@ -169,7 +169,7 @@ body {
 }
 #low{
     background-color: rgba(0,0,0,0.00);
-    padding-top: 35px;
+    padding-top: 25px;
     width: 100%;
 }
 #bot{

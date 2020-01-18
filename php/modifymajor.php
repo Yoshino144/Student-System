@@ -41,6 +41,22 @@ $result2 = mysqli_query( $link, $ming2 );
     min-height: 36px;
     width: 83.9%;
 }
+::-webkit-scrollbar {
+width: 16px;
+height: 16px;
+background-color: #f5f5f5;
+}
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+border-radius: 10px;
+background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+height: 20px;
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #009688;
+}
 </style>
 </head>
 
@@ -90,7 +106,7 @@ $result2 = mysqli_query( $link, $ming2 );
                     <td id="tdd">&nbsp;</td>
                     <td id="td1"><h1 style="color:#6c757d;margin-top: -30px;">学院名:</h1>
                         <br>
-                        <div class="layui-form-item">
+                        <div class="layui-form-item ">
                             <div class="layui-input-block">
                                 <select name="college_id" >
                                     <?php

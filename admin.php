@@ -38,7 +38,8 @@ $result = mysqli_query( $link, $ming );
               content: '是否确认删除'
               ,btn: ['删除', '取消']
               ,yes: function(index, layero){
-                window.location.href = 'http://localhost/pro/php/operation.php?operation=deleteadmin&id=' + id;
+                  
+                window.location.href = 'http://localhost/pro/php/operation.php?operation=deleteadmin&id=' + id ;
               }
             });
         }

@@ -20,7 +20,7 @@ $(document).ready(function () {
             top: '18px'
         });
     });
-
+    
     $("#text_nav").mouseout(function () {
         $("#text_nav").animate({
             fontSize: '20px',
@@ -39,6 +39,9 @@ $(document).ready(function () {
             });
             $("#text_nav").animate({
                 left: '15px'
+            });
+            $("#rightdiv").animate({
+                left: '790px'
             });
             $("#img-u0").animate({
                 width: '40px',
@@ -112,6 +115,10 @@ $(document).ready(function () {
             });
             $("#dw").animate({
                 marginLeft: 260
+            });
+            
+            $("#rightdiv").animate({
+                left: '860px'
             });
             $("#img-u0").animate({
                 width: '30px',

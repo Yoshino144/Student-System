@@ -6,16 +6,24 @@ session_start();
 if ( $_SESSION[ 'username' ] == "" || $_SESSION[ 'username' ] == " " )
     header( "location:login.php" );
 
+$serve = 'localhost:3306';
+$username = 'root';
+$password = 'root';
+$dbname = 'school';
+$link = mysqli_connect( $serve, $username, $password, $dbname );
+mysqli_set_charset( $link, 'UTF-8' );
+$ming = 'select * from cz order by num desc';
+$result = mysqli_query( $link, $ming );
 ?>
 <html>
 <head>
 <meta charset="utf-8">
 <title>首 页</title>
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/index.js"></script> 
+<script src="js/layui/layui.all.js" charset="utf-8"></script>
 <link href="css/index.css" rel="stylesheet" type="text/css">
 <link href="css/base.css" rel="stylesheet" type="text/css">
-    
 <link href="js/layui/css/layui.css" rel="stylesheet" media="all">
 <script>
         $(document).ready(function () {
@@ -94,14 +102,19 @@ if ( $_SESSION[ 'username' ] == "" || $_SESSION[ 'username' ] == " " )
 #waao {
     background-color: #ffffff;
     position: absolute;
-    width: 70%;
-    margin-left: 4.2%;
-    top: 120px;
+    width: 40%;
+    height: 94px;
+    margin-left: 600px;
+    margin-top: -10px;
+    top: 80px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    padding-top: 7px;
 }
 #biu1 {
     font-family: '微软雅黑';
     background-color: #ffffff;
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
     margin: 0 auto;
     color: #1976d2;
@@ -109,7 +122,7 @@ if ( $_SESSION[ 'username' ] == "" || $_SESSION[ 'username' ] == " " )
 #biu2 {
     font-family: '微软雅黑';
     background-color: #ffffff;
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
     margin: 0 auto;
     color: #0097a7;
@@ -267,12 +280,30 @@ if ( $_SESSION[ 'username' ] == "" || $_SESSION[ 'username' ] == " " )
     color: #c2185b;
 }
 #waya {
-    background-color: #123456;
+    background-color: #ffffff;
     position: absolute;
-    width: 70%;
-    height: 330px;
-    margin-left: 4.2%;
-    top: 280px;
+    width: 525px;
+    height: 420px;
+    margin-left: 10px;
+    ;
+    top: 0px;
+    border-radius: 4px;
+}
+.aabbcc::-webkit-scrollbar {
+width: 16px;
+height: 16px;
+background-color: #f5f5f5;
+}
+.aabbcc::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+border-radius: 10px;
+background-color: #f5f5f5;
+}
+.aabbcc::-webkit-scrollbar-thumb {
+height: 20px;
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #009688;
 }
 </style>
 </head>
@@ -299,42 +330,175 @@ if ( $_SESSION[ 'username' ] == "" || $_SESSION[ 'username' ] == " " )
         <p id="user-text"  ><?php echo "Hi," . $_SESSION['username']; ?> </p>
         <!--            <a id="exit-text" href="login.php" style="color: #57585d" >退出</a>--> 
         <img src="img/more.png" id="head-more"> </div>
-    <div id="con" style="height: 605px" >
-        <div id="waao">
-            <h1 id="biu1">Hi~ o(*￣▽￣*)ブ</h1>
-            <h1 id="biu2">欢迎你＼( ＾∀＾）</h1>
-            <h1 id="biu3">ฅ( ̳• ◡ • ̳)ฅ</h1>
-            <h1 id="biu4">๑乛◡乛๑</h1>
-            <h1 id="biu5">(｡◕ˇ∀ˇ◕）</h1>
-            <h1 id="biu6">ʕ •ᴥ•ʔ</h1>
-            <h1 id="biu7">(*´▽`*)ヽ(●´∀`●)ﾉ</h1>
-            <h1 id="biu8">(◍•͈⌔•͈◍)</h1>
-            <h1 id="biu9">……\ ( > < ) /</h1>
-            <h1 id="biu10">(๑¯◡¯๑)</h1>
-            <h1 id="biu11">o(^▽^)o</h1>
-            <h1 id="biu12">╮(﹀_﹀”)╭</h1>
-            <h1 id="biu13">(=ＴェＴ=)</h1>
-            <h1 id="biu14">⊂((≧⊥≦))⊃</h1>
-            <h1 id="biu15">ε(┬┬﹏┬┬)3</h1>
-            <h1 id="biu16">(╯‵□′)╯炸弹！•••*～●</h1>
-            <h1 id="biu17">ଘ(੭ˊᵕˋ)੭* ੈ✩‧₊˚</h1>
-            <h1 id="biu18">✧*｡٩(ˊωˋ*)و✧*｡</h1>
-            <h1 id="biu19">✧( ु•⌄• )◞◟( •⌄• ू )✧</h1>
-            <h1 id="biu20">╭(●｀∀′●)╯╰(●’◡’●)╮</h1>
-            <h1 id="biu21">///•A•///</h1>
-        </div>
-        <div id="waya">
-            1    
+    <div id="con" style="height: 430px; width: 540px ;" class="layui-anim layui-anim-scale">
+        <div id="waya" >
+            <fieldset class="layui-elem-field layui-field-title" >
+                <legend style="margin-top: 0px;">最新消息</legend>
+            </fieldset>
+            <ul class="aabbcc" id="LAY_demo1" style="list-style-type: disc;height: 360px;overflow: auto;width: 500px;margin-top:0px;margin-left: 15px;padding-left: 10px;">
+                <li class="layui-timeline-item"> <i class="layui-icon layui-timeline-axis"></i>
+                    <div class="layui-timeline-content layui-text">
+                        <div class="layui-timeline-title">
+                            <?php $row = mysqli_fetch_array( $result );echo '<b>' . $row['ct']. '</b> &nbsp;&nbsp;' . $row['cz'];?>
+                        </div>
+                    </div>
+                </li>
+                <li class="layui-timeline-item"> <i class="layui-icon layui-timeline-axis"></i>
+                    <div class="layui-timeline-content layui-text">
+                        <div class="layui-timeline-title">
+                            <?php $row = mysqli_fetch_array( $result );echo '<b>' . $row['ct']. '</b> &nbsp;&nbsp;' . $row['cz'];?>
+                        </div>
+                    </div>
+                </li>
+                <li class="layui-timeline-item"> <i class="layui-icon layui-timeline-axis"></i>
+                    <div class="layui-timeline-content layui-text">
+                        <div class="layui-timeline-title">
+                            <?php $row = mysqli_fetch_array( $result );echo '<b>' . $row['ct']. '</b> &nbsp;&nbsp;' . $row['cz'];?>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div id="low">
+    <div id="waao" class="layui-anim layui-anim-scale">
+        <h1 id="biu1" style="font-size: 60px;">Hi~ o(*￣▽￣*)ブ</h1>
+        <h1 id="biu2" style="font-size: 60px;">欢迎你＼( ＾∀＾）</h1>
+        <h1 id="biu3" style="font-size: 60px;">ฅ( ̳• ◡ • ̳)ฅ</h1>
+        <h1 id="biu4" style="font-size: 60px;">๑乛◡乛๑</h1>
+        <h1 id="biu5" style="font-size: 60px;">(｡◕ˇ∀ˇ◕）</h1>
+        <h1 id="biu6" style="font-size: 60px;">ʕ •ᴥ•ʔ</h1>
+        <h1 id="biu7" style="font-size: 60px;">(*´▽`*)</h1>
+        <h1 id="biu8" style="font-size: 60px;">(◍•͈⌔•͈◍)</h1>
+        <h1 id="biu9" style="font-size: 60px;">……\ ( > < ) /</h1>
+        <h1 id="biu10" style="font-size: 60px;">(๑¯◡¯๑)</h1>
+        <h1 id="biu11" style="font-size: 60px;">o(^▽^)o</h1>
+        <h1 id="biu12" style="font-size: 60px;">╮(﹀_﹀”)╭</h1>
+        <h1 id="biu13" style="font-size: 60px;">(=ＴェＴ=)</h1>
+        <h1 id="biu14" style="font-size: 60px;">⊂((≧⊥≦))⊃</h1>
+        <h1 id="biu15" style="font-size: 60px;">ε(┬┬﹏┬┬)3</h1>
+        <h1 id="biu16" style="font-size: 60px;">(╯‵□′)╯炸弹</h1>
+        <h1 id="biu17" style="font-size: 60px;">ଘ(੭ˊᵕˋ)੭*</h1>
+        <h1 id="biu18" style="font-size: 60px;">✧٩(ˊωˋ*)و✧</h1>
+        <h1 id="biu19" style="font-size: 60px;">✧( ु•⌄• )◞</h1>
+        <h1 id="biu20" style="font-size: 60px;">╭(●｀∀′●)╯</h1>
+        <h1 id="biu21" style="font-size: 60px;">///•A•///</h1>
+    </div>
+    <div class="layui-anim layui-anim-up" style="
+    background-color: #ffffff;
+    width: 540px;
+    height: 162px;
+    margin-left: 35px;
+    margin-top: 25px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    border-radius: 4px;">
+        <p style="height: 1px;">&nbsp;</p>
+        <fieldset class="layui-elem-field layui-field-title" >
+            <legend>主题颜色</legend>
+        </fieldset>
+        <div style="margin-left: 75px;">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline" style="width: 120px;">
+                        <input type="text" value="" placeholder="请选择颜色" class="layui-input" id="test-form-input">
+                    </div>
+                    <div class="layui-inline" style="left: -11px;">
+                        <div id="test-form"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <form class="layui-form" action="" style="position: absolute;top:58px;left:305px;z-index: 120">
+            <div class="layui-form-item">
+                <div class="layui-input-inline" style="width: 120px;">
+                    <input type="text" value="" placeholder="请选择颜色" class="layui-input" id="test-form-input2">
+                </div>
+                <div class="layui-inline" style="left: -11px;">
+                    <div id="test-form2"></div>
+                </div>
+            </div>
+        </form>
+        <p style="color:#a4a6ad;position: absolute;top:118px;left:105px;z-index: 120; font-size: 14px;">在这里你可以分别修改此页面菜单栏及头部主题颜色</p>
+    </div>
+    <div class="layui-anim layui-anim-up" id="rightdiv" style="
+    position: absolute;
+    top:200px;
+    left:860px;
+    background-color: #ffffff;
+    width: 40%;
+    height: 487px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    border-radius: 4px;"></div>
+    <div id="low" style=" padding-top: 25px;">
         <div id="bot">
-            <p style="color: #98a6ad; font-size: 17px; margin-left: 35px;margin-top: 15px;">2020 © STU SYS - Powered by PC - Theme by PC - Version 3.5</p>
+            <p style="color: #98a6ad; font-size: 17px; margin-left: 35px;margin-top: 15px;">2020 © STU SYS - Powered by PC - Theme by PC - Version 4.0!!!!</p>
         </div>
     </div>
 </div>
 <div id="more"> <a href="login.php" style="text-decoration:none;"> <img src="img/exit.png" id="exit-img">
-    <p id="exit-text">退出系统</p>
+    <p id="exit-text" >退出系统</p>
     </a> </div>
+<script>
+        var arr = eval(<?php echo json_encode(mysqli_fetch_all($result));?>);
+        console.log("123");
+        console.log(arr);
+        console.log(arr.length);
+        var arrlength=arr.length;
+        
+layui.use('flow', function(){
+  var flow = layui.flow;
+ var j=0;
+  flow.load({
+    elem: '#LAY_demo1'
+    ,scrollElem: '#LAY_demo1' 
+    ,done: function(page, next){ 
+       
+      setTimeout(function(){
+        var lis = [];
+        for(var i = 0; i < 3; i++){
+            console.log(j + arr[j][1] + arr[j][0]);
+                lis.push('<li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis"></i><div class="layui-timeline-content layui-text"><div class="layui-timeline-title"><b>'+arr[j][1]+'</b> &nbsp;&nbsp;'+arr[j][0]+'</div></div></li>');j+=1;
+            
+        }
+        next(lis.join(''), page < 3); 
+      }, 500);
+        
+    }
+  });
+  
+  
+});
+        
+  layui.use('colorpicker', function(){
+  var $ = layui.$
+  ,colorpicker = layui.colorpicker;    
+  colorpicker.render({
+    elem: '#test-form'
+    ,color: '#6777ef'
+    ,done: function(color){
+      $('#test-form-input').val(color);
+    }
+    ,change: function(color){
+      console.log(color);
+        $("#menu-u0").css("background-color",color);
+    }
+  });
+      
+      var $ = layui.$
+  ,colorpicker = layui.colorpicker;    
+  colorpicker.render({
+    elem: '#test-form2'
+    ,color: '#6777ef'
+    ,done: function(color){
+      $('#test-form-input2').val(color);
+    }
+    ,change: function(color){
+      console.log(color);
+        $("#head").css("background-color",color);
+    }
+  });
+  });
+</script>
 </body>
 </html>

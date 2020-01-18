@@ -22,10 +22,16 @@
             "VALUES ".
             "('$user_name','$number','$password','$showtime')";
         echo $insert;
+        
         if($user_name!="")
         {
             $res=mysqli_query($link,$insert);
             if($res>0){
+                
+        $ming2='INSERT INTO cz (cz,ct) VALUES(" ' . $_SESSION['username']. ' 创建了 <b>' . $user_name . '</b> 管理员账户' .' ","' . $showtime . '")';
+        echo $ming2;
+        $res2=mysqli_query($link,$ming2);
+        
                 echo "<script>alert('操作成功');</script>";
                 header("Location: ../admin.php");
             }
