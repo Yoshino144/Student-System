@@ -14,6 +14,7 @@ if ($_SESSION['username'] == "" || $_SESSION['username'] == " ")
     mysqli_set_charset($link,'UTF-8');
     $ming='select * from college';
     $result = mysqli_query($link,$ming);
+
 ?>
 
 <html>
